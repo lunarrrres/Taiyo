@@ -1,5 +1,4 @@
-
-changeThemeDarkButton.onclick = function(){
+changeThemeDarkButton.onclick = function() {
 
     document.body.style.backgroundColor = 'rgb(29, 41, 54)';
     setColorForPar('rgb(240, 248, 255)', aboutUs.children[0].children)
@@ -9,7 +8,7 @@ changeThemeDarkButton.onclick = function(){
     aboutUs.style.boxShadow = "none"
 }
         
-changeThemeLightButton.onclick = function (){
+changeThemeLightButton.onclick = function() {
     document.body.style.backgroundColor = 'rgb(240, 248, 255)';
     setColorForPar('black', aboutUs.children[0].children)
     changeThemeLightButton.style.display = "none";
@@ -23,4 +22,16 @@ function setColorForPar(color, elements){
             elements[i].style.color = color
         }
     }
+}
+
+hamburgerButton.onclick = function() {
+    document.isShowNavigation = !document.isShowNavigation;
+    const a = document.getElementById('navigation').childNodes;
+    console.log(a);
+    if (document.isShowNavigation) {
+        a[3].style.display = 'flex';
+    } else {
+        a[3].style.display = 'none'
+    }
+    
 }
